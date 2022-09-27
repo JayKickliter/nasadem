@@ -3,6 +3,13 @@ name = "nasadem"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+byteorder = "*"
+geo-types = "*"
+
+[dev-dependencies]
+bincode = "*"
+hextree = { version = "*", features = ["serde-support"] }
+
+[profile.release]
+debug = true
